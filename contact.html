@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Victorious Visuals - Contact Page</title>
+        <title>Victorious Visuals - Contact Us Page</title>
 
         <!-- CSS FILES -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -227,8 +227,8 @@ button:hover {
         <form 
           action="https://docs.google.com/forms/d/e/1FAIpQLSdQzoC9L_2mAQl8FYLsFFFcY5A3KkK9aCQUM6d0DUq9hlgRfg/formResponse" 
                     method="POST" 
-                    target="_blank"
-                    onsubmit="return validateForm()">
+                    target="hidden_iframe"
+                    onsubmit="submitted=true;">
 
             <input type="text" name="entry.2005620554" placeholder="Full Name" required>
             <input type="email" name="entry.1045781291" placeholder="Email" required>
@@ -238,6 +238,12 @@ button:hover {
 
             <button type="submit">Contact Us</button>
         </form>
+
+         <iframe
+            name="hidden_iframe"
+            style="display:none;"
+            onload="if(submitted){window.location='thankyou.html';}">
+        </iframe>
 
         <div class="socials">
             <i class="bi bi-pinterest"></i>       
